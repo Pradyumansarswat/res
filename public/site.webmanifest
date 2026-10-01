@@ -1,0 +1,11 @@
+{
+  "name": "Reliance Engineering Solutions",
+  "short_name": "RES",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#04121a",
+  "theme_color": "#04121a",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}

@@ -1,0 +1,16 @@
+# TODO(client): Verify these legacy WordPress paths and targets before launch.
+/swimming-pool/ /services/swimming-pool 301!
+/jacuzzi/ /services/jacuzzi 301!
+/water-proofing/ /services/waterproofing 301!
+/expansion-joints-treatments/ /services/expansion-joints 301!
+/spa-sauna/ /services/spa-sauna-steam 301!
+/tiles/ /services/tiles 301!
+/water-fountains/ /services/water-fountains 301!
+/water-features/ /services/water-features 301!
+/completed-projects/ /projects 301!
+/ongoing-projects/ /projects 301!
+/clients/ /projects 301!
+/gallery/ /gallery 301!
+/contact-us/ /contact 301!
+/about-us/ /about 301!
+/privacy-policy/ /privacy-policy 301!

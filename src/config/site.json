@@ -1,0 +1,87 @@
+{
+  "name": "Reliance Engineering Solutions",
+  "shortName": "RES",
+  "siteUrl": "https://example.com",
+  "owner": "Udit Keshari",
+  "established": 2013,
+  "business": [
+    "swimming pool construction",
+    "swimming pool renovation",
+    "pool heating (heat pumps)",
+    "pool lighting",
+    "jacuzzi",
+    "waterproofing",
+    "expansion joint treatment",
+    "spa/sauna/steam",
+    "tiles",
+    "water fountains",
+    "water features"
+  ],
+  "address": {
+    "full": "NX One, Opposite Gaur City Mall, Noida Extension (Greater Noida West), Uttar Pradesh 201318, India",
+    "streetAddress": "NX One, Opposite Gaur City Mall, Noida Extension",
+    "addressLocality": "Greater Noida West",
+    "addressRegion": "Uttar Pradesh",
+    "postalCode": "201318",
+    "addressCountry": "IN"
+  },
+  "phone": "+91 88825 98396",
+  "phoneHref": "+918882598396",
+  "whatsApp": "https://wa.me/918882598396",
+  "email": "resindia121@gmail.com",
+  "serviceAreaName": "Pan India",
+  "coordinates": {
+    "latitude": null,
+    "longitude": null,
+    "status": "TODO(client): Add verified map coordinates before publishing."
+  },
+  "mapsLink": "https://www.google.com/maps/search/?api=1&query=NX+One+Gaur+City+Mall+Greater+Noida+West",
+  "serviceArea": ["Pan India"],
+  "schemaServiceArea": { "@type": "Country", "name": "India" },
+  "socials": [
+    "https://www.facebook.com/people/Reliance-Engineering-Solutions/100085677601179/",
+    "https://www.youtube.com/channel/UCS_0xslbtEoAsN2UrXo5IpA",
+    "https://www.linkedin.com/company/reliance-engineering-solutions-swimming-pool/",
+    "https://www.instagram.com/reliance.engineering.solutions/"
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "https://schema.org/Monday",
+        "https://schema.org/Tuesday",
+        "https://schema.org/Wednesday",
+        "https://schema.org/Thursday",
+        "https://schema.org/Friday",
+        "https://schema.org/Saturday"
+      ],
+      "opens": "09:30",
+      "closes": "18:30"
+    }
+  ],
+  "openingHoursStatus": "Monday to Saturday: 9:30 AM – 6:30 PM; Sunday: Closed",
+  "domainStatus": "TODO(client): Set VITE_SITE_URL to the production domain.",
+  "clientTodos": [
+    "TODO(client): Add verified map coordinates before publishing.",
+    "TODO(client): Set VITE_SITE_URL to the production domain.",
+    "TODO(client): Add real project details, locations, images and permissions.",
+    "TODO(client): Add approved testimonials only, with client consent.",
+    "TODO(client): Confirm detailed service deliverables and scope.",
+    "TODO(client): Provide a reviewed privacy policy for website enquiries.",
+    "TODO(client): Confirm GST and licence information before publishing."
+  ],
+  "routes": ["/", "/about", "/services", "/projects", "/gallery", "/contact", "/privacy-policy"],
+  "services": [
+    { "slug": "swimming-pool", "name": "Swimming Pool Construction", "image": "/images/pool-aerial.jpg", "icon": "waves" },
+    { "slug": "jacuzzi", "name": "Jacuzzi Construction", "image": "/images/spa.jpg", "icon": "spa" },
+    { "slug": "waterproofing", "name": "Swimming Pool Waterproofing", "image": "/images/engineering.jpg", "icon": "shield" },
+    { "slug": "expansion-joints", "name": "Expansion Joint Treatment", "image": "/images/indoor-pool.jpg", "icon": "layers" },
+    { "slug": "spa-sauna-steam", "name": "Spa, Sauna & Steam", "image": "/images/sauna.jpg", "icon": "spa" },
+    { "slug": "tiles", "name": "Swimming Pool Tiles", "image": "/images/water-texture.jpg", "icon": "grid" },
+    { "slug": "water-fountains", "name": "Water Fountains", "image": "/images/fountain.jpg", "icon": "droplets" },
+    { "slug": "water-features", "name": "Water Features", "image": "/images/fountain.jpg", "icon": "sparkles" },
+    { "slug": "pool-heating", "name": "Pool Heating & Heat Pumps", "image": "/images/indoor-pool.jpg", "icon": "thermometer" },
+    { "slug": "pool-lighting", "name": "Swimming Pool Lighting", "image": "/images/fountain.jpg", "icon": "sparkles" },
+    { "slug": "pool-renovation", "name": "Swimming Pool Renovation", "image": "/images/water-texture.jpg", "icon": "wrench" }
+  ]
+}
