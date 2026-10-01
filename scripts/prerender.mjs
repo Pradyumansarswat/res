@@ -14,12 +14,39 @@ const shellHtml = await readFile(path.join(dist, 'index.html'), 'utf8')
 const previewServer = await preview({ root, preview: { host: '127.0.0.1', port: 0, strictPort: false } })
 const address = previewServer.httpServer.address()
 const origin = `http://127.0.0.1:${typeof address === 'object' && address ? address.port : 4173}`
-const browser = await puppeteer.launch({
+const isLinux = process.platform === 'linux'
+let browserOptions = {
   headless: true,
   args: ['--no-sandbox', '--disable-setuid-sandbox'],
-})
+}
+
+if (isLinux) {
+  try {
+    const { default: chromium } = await import('@sparticuz/chromium')
+    const executablePath = await chromium.executablePath()
+    browserOptions = {
+      args: await puppeteer.defaultArgs({ args: chromium.args, headless: 'shell' }),
+      defaultViewport: chromium.defaultViewport,
+      executablePath,
+      headless: 'shell',
+    }
+  } catch (error) {
+    const details = error instanceof Error ? error.message : String(error)
+    throw new Error(`Unable to resolve serverless Chromium for Linux prerendering: ${details}`, { cause: error })
+  }
+}
+
+let browser
 
 try {
+  try {
+    browser = await puppeteer.launch(browserOptions)
+  } catch (error) {
+    if (!isLinux) throw error
+    const details = error instanceof Error ? error.message : String(error)
+    throw new Error(`Unable to launch serverless Chromium for Linux prerendering: ${details}`, { cause: error })
+  }
+
   const page = await browser.newPage()
   page.setDefaultTimeout(60000)
   const renderedTitles = new Set()
@@ -117,6 +144,6 @@ try {
     `User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /dev/\nDisallow: /_dev/\nSitemap: ${siteUrl}/sitemap.xml\n`,
   )
 } finally {
-  await browser.close()
+  await browser?.close()
   await new Promise((resolve, reject) => previewServer.httpServer.close((error) => error ? reject(error) : resolve()))
 }
