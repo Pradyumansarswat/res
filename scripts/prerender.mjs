@@ -48,6 +48,11 @@ try {
 
   const page = await browser.newPage()
   page.setDefaultTimeout(60000)
+  await page.evaluateOnNewDocument(() => {
+    try {
+      sessionStorage.removeItem('res-intro')
+    } catch {}
+  })
   const renderedTitles = new Set()
   let homepageHtml = ''
   for (const route of [...routes, '/_prerender-not-found']) {

@@ -391,6 +391,278 @@ select.field option {
   height: 100% !important;
 }
 
+/* ---------- Pool loading screen ---------- */
+.app-content {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+.app-content[aria-hidden="true"] {
+  visibility: hidden;
+}
+
+.intro-seen .app-content[aria-hidden="true"] {
+  visibility: visible;
+}
+
+.intro-seen .pool-loader--intro {
+  visibility: hidden;
+}
+
+.pool-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--color-abyss, #06182b);
+  color: #9fd8ee;
+}
+
+.pool-loader__content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pool-loader__glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(440px, 100vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(31, 182, 232, 0.24), rgba(10, 95, 168, 0.08) 38%, transparent 70%);
+  filter: blur(18px);
+  transform: translate(-50%, -58%);
+  animation: pool-glow 3s cubic-bezier(.45,.05,.3,1) alternate infinite;
+  pointer-events: none;
+}
+
+.pool-loader__badge {
+  position: relative;
+  isolation: isolate;
+  width: min(220px, 55vw);
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.pool-loader__badge::before,
+.pool-loader__badge::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border: 1px solid rgba(127, 231, 255, 0.55);
+  border-radius: 50%;
+  content: "";
+  pointer-events: none;
+  animation: pool-ripple 3s cubic-bezier(.45,.05,.3,1) alternate infinite;
+}
+
+.pool-loader__badge::after {
+  animation-delay: 1.5s;
+}
+
+.pool-loader__empty-logo,
+.pool-loader__water-logo img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pool-loader__empty-logo {
+  filter: grayscale(1);
+  opacity: 0.24;
+}
+
+.pool-loader__water {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(127, 231, 255, 0.18), rgba(31, 182, 232, 0.48) 48%, rgba(10, 95, 168, 0.72));
+  animation: pool-fill 3s cubic-bezier(.45,.05,.3,1) alternate infinite;
+}
+
+.pool-loader__water-logo {
+  position: absolute;
+  inset: 0;
+  animation: pool-counter 3s cubic-bezier(.45,.05,.3,1) alternate infinite;
+}
+
+.pool-loader__water-logo img {
+  filter: drop-shadow(0 0 10px rgba(127, 231, 255, 0.18));
+}
+
+.pool-loader__wave {
+  position: absolute;
+  top: -8px;
+  left: 0;
+  width: 200%;
+  height: 20px;
+  overflow: visible;
+  fill: rgba(127, 231, 255, 0.52);
+  pointer-events: none;
+}
+
+.pool-loader__wave--front {
+  animation: pool-wave-forward 3s cubic-bezier(.45,.05,.3,1) alternate infinite;
+}
+
+.pool-loader__wave--back {
+  top: -4px;
+  fill: rgba(31, 182, 232, 0.42);
+  animation: pool-wave-reverse 4s cubic-bezier(.45,.05,.3,1) alternate infinite;
+}
+
+.pool-loader__lane {
+  position: relative;
+  width: min(240px, 68vw);
+  height: 2px;
+  overflow: hidden;
+  background: rgba(127, 231, 255, 0.16);
+}
+
+.pool-loader__lane span {
+  position: absolute;
+  top: 0;
+  left: -35%;
+  width: 35%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #7fe7ff, transparent);
+  animation: pool-lane-streak 3s cubic-bezier(.45,.05,.3,1) alternate infinite;
+}
+
+.pool-loader__label {
+  margin: -0.75rem 0 0;
+  color: #9fd8ee;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  line-height: 1.5;
+  text-align: center;
+  text-transform: uppercase;
+  animation: pool-label-pulse 3s cubic-bezier(.45,.05,.3,1) alternate infinite;
+}
+
+.pool-loader.is-leaving {
+  pointer-events: none;
+  animation: pool-exit 0.85s cubic-bezier(.7,0,.3,1) forwards;
+}
+
+.pool-loader.is-leaving .pool-loader__water,
+.pool-loader.is-leaving .pool-loader__water-logo {
+  animation-play-state: paused;
+}
+
+.pool-loader.is-leaving .pool-loader__badge {
+  animation: pool-badge-out 0.6s ease-in forwards;
+}
+
+@keyframes pool-fill {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes pool-counter {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+
+@keyframes pool-wave-forward {
+  from { transform: translateX(0); }
+  to { transform: translateX(-18%); }
+}
+
+@keyframes pool-wave-reverse {
+  from { transform: translateX(-18%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes pool-lane-streak {
+  from { transform: translateX(0); }
+  to { transform: translateX(390%); }
+}
+
+@keyframes pool-glow {
+  from { opacity: 0.62; transform: translate(-50%, -58%) scale(0.88); }
+  to { opacity: 1; transform: translate(-50%, -58%) scale(1.08); }
+}
+
+@keyframes pool-ripple {
+  from { opacity: 0.55; transform: scale(0.78); }
+  to { opacity: 0; transform: scale(1.7); }
+}
+
+@keyframes pool-label-pulse {
+  from { opacity: 0.68; }
+  to { opacity: 1; }
+}
+
+@keyframes pool-exit {
+  from { clip-path: circle(150% at 50% 50%); }
+  to { clip-path: circle(0% at 50% 50%); }
+}
+
+@keyframes pool-badge-out {
+  to { opacity: 0; transform: scale(1.15); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pool-loader__glow,
+  .pool-loader__badge::before,
+  .pool-loader__badge::after,
+  .pool-loader__water,
+  .pool-loader__water-logo,
+  .pool-loader__wave,
+  .pool-loader__lane span,
+  .pool-loader__label {
+    animation: none;
+  }
+
+  .pool-loader__badge::before,
+  .pool-loader__badge::after {
+    content: none;
+  }
+
+  .pool-loader__water {
+    transform: translateY(50%);
+  }
+
+  .pool-loader__water-logo {
+    transform: translateY(-50%);
+  }
+
+  .pool-loader__lane span {
+    left: 32.5%;
+  }
+
+  .pool-loader__label {
+    opacity: 1;
+  }
+
+  .pool-loader.is-leaving {
+    animation: none;
+    opacity: 0;
+  }
+
+  .pool-loader.is-leaving .pool-loader__badge {
+    animation: none;
+    opacity: 0;
+    transform: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
