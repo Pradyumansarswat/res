@@ -26,7 +26,6 @@ if (isLinux) {
     const executablePath = await chromium.executablePath()
     browserOptions = {
       args: await puppeteer.defaultArgs({ args: chromium.args, headless: 'shell' }),
-      defaultViewport: chromium.defaultViewport,
       executablePath,
       headless: 'shell',
     }
