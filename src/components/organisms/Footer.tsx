@@ -43,7 +43,7 @@ export default function Footer() {
                 space?
               </h2>
               <p className="mt-5 max-w-xl text-[15px] leading-relaxed text-mist">
-                From pool construction to water features, RES serves requirements across Delhi NCR.
+                From pool construction to water features, RES serves requirements across North India.
               </p>
             </div>
 
@@ -73,7 +73,7 @@ export default function Footer() {
             <Logo />
             <p className="mt-6 max-w-sm text-[14.5px] leading-relaxed text-mist">
                 {site.fullName} ({site.name}) — established {site.established} in {site.address.locality}. Swimming pool
-                and water engineering services across Delhi NCR.
+                and water engineering services across North India.
             </p>
 
             <div className="mt-7 flex items-center gap-3">

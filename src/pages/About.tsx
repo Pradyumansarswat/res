@@ -58,7 +58,7 @@ const strengths = [
   },
   {
     icon: Compass,
-    title: 'Delhi NCR Service Area',
+    title: 'North India Service Area',
     text: 'Serving Delhi, Noida, Gurugram, Ghaziabad and Faridabad.',
   },
 ]

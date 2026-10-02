@@ -589,7 +589,7 @@ export function ContactPage() {
               </div>
               <div className="absolute -bottom-8 -left-4 rounded-[22px] border border-white/12 bg-abyss/86 px-7 py-6 backdrop-blur-xl sm:-left-10">
                 <p className="font-display text-[2.35rem] font-600 leading-none text-bright">
-                  Delhi NCR
+                  North India
                 </p>
                 <p className="mt-2 text-[9.5px] font-700 uppercase tracking-[0.19em] text-mist">
                   Delhi, Noida, Gurugram, Ghaziabad & Faridabad

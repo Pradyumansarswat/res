@@ -33,6 +33,8 @@ import type { LucideIcon } from 'lucide-react'
 import SEO from '../components/SEO'
 import { pageSEO } from '../config/seo'
 import { siteProfile } from '../config/site'
+import MediaRenderer from '../components/MediaRenderer'
+import type { Media } from '../components/MediaRenderer'
 
 const iconMap: Record<string, LucideIcon> = {
   waves: Waves,
@@ -47,36 +49,41 @@ const iconMap: Record<string, LucideIcon> = {
   umbrella: Umbrella,
 }
 
-const motionPanels = [
+const motionPanels: { tag: string; title: string; text: string; image: string; media: Media }[] = [
   {
     tag: 'Design & Drawing',
     title: 'Pool design and architecture',
     text: 'Swimming pool design, layout planning, architectural planning, technical planning and 3D visualization.',
     image: '/images/engineering.jpg',
+    media: { type: 'image', src: '/images/engineering.jpg' },
   },
   {
     tag: 'Construction',
     title: 'Swimming pool construction',
     text: 'Construction solutions covering structure, waterproofing, finishing, equipment installation and commissioning.',
     image: '/images/indoor-pool.jpg',
+    media: { type: 'image', src: '/images/indoor-pool.jpg' },
   },
   {
     tag: 'Pool Heating',
     title: 'Comfortable pool temperatures',
     text: 'Pool heating solutions including heat pumps, heat exchangers and electrical pool heaters.',
     image: '/images/indoor-pool.jpg',
+    media: { type: 'image', src: '/images/indoor-pool.jpg' },
   },
   {
     tag: 'Pool Lighting',
     title: 'Pool lighting systems',
     text: 'LED pool lights, underwater LED lights, fountain lights and pool lighting systems.',
     image: '/images/fountain.jpg',
+    media: { type: 'image', src: '/images/fountain.jpg' },
   },
   {
     tag: 'Engineering',
     title: 'Specialized engineering services',
     text: 'Pool renovation, repair, equipment, covering, waterproofing and expansion joint services.',
     image: '/images/team.jpg',
+    media: { type: 'image', src: '/images/team.jpg' },
   },
 ]
 
@@ -390,17 +397,21 @@ export default function Home() {
             <div className="relative rounded-[30px] border border-abyss/10 bg-abyss/6 p-3">
               <ParallaxFrame
                 src="/images/hero-pool.jpg"
+                media={{ type: 'image', src: '/images/hero-pool.jpg' }}
                 alt="Swimming pool"
                 ratio="aspect-[5/6]"
                 className="rounded-[22px]"
               />
 
               <div className="absolute -bottom-8 -right-2 w-[58%] overflow-hidden rounded-[22px] border-[7px] border-cream shadow-[0_36px_80px_-32px_rgba(4,18,26,0.55)] sm:-right-8">
-                <img
-                  src="/images/water-texture.jpg"
+                <MediaRenderer
+                  media={{
+                    type: 'youtube',
+                    src: 'https://www.youtube.com/embed/4ZM-rod0GhQ?si=zqAJuglHapqTdN85',
+                  }}
+                  fallbackSrc="/images/water-texture.jpg"
                   alt="Water texture"
                   className="aspect-[4/3] w-full object-cover"
-                  loading="lazy"
                 />
               </div>
 
@@ -597,11 +608,12 @@ export default function Home() {
                 className="group relative w-[82vw] shrink-0 overflow-hidden rounded-[28px] border border-white/10 sm:w-[62vw] lg:w-[30vw]"
               >
                 <div className="relative h-[46vh] overflow-hidden lg:h-[46vh]">
-                  <img
-                    src={p.image}
+                  <MediaRenderer
+                    media={p.media}
+                    fallbackSrc={p.image}
                     alt={p.title}
                     className="h-panel-img h-full w-full object-cover"
-                    loading="lazy"
+                    wrapperClassName="absolute inset-0"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-abyss via-abyss/28 to-transparent" />
                   <span className="absolute left-6 top-6 rounded-full border border-white/18 bg-abyss/55 px-4 py-2 text-[9.5px] font-700 uppercase tracking-[0.21em] text-cream backdrop-blur-md">
@@ -814,6 +826,7 @@ function ProjectCardLight({
   location,
   scope,
   image,
+  media,
   status,
   index,
 }: {
@@ -822,6 +835,7 @@ function ProjectCardLight({
   location: string
   scope: string
   image: string
+  media?: Media
   status: string
   index: number
 }) {
@@ -831,11 +845,12 @@ function ProjectCardLight({
       className="group relative block overflow-hidden rounded-[26px] border border-abyss/10 bg-abyss/6 transition-all duration-600 hover:-translate-y-2 hover:shadow-[0_42px_90px_-42px_rgba(4,18,26,0.62)]"
     >
       <div className="relative aspect-[4/3] overflow-hidden">
-        <img
-          src={image}
+        <MediaRenderer
+          media={media}
+          fallbackSrc={image}
           alt={title}
           className="h-full w-full object-cover transition-transform duration-[900ms] group-hover:scale-[1.09]"
-          loading="lazy"
+          wrapperClassName="absolute inset-0"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-abyss/78 via-abyss/10 to-transparent" />
 

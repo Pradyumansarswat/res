@@ -29,14 +29,14 @@
   "phoneHref": "+918882598396",
   "whatsApp": "https://wa.me/918882598396",
   "email": "resindia121@gmail.com",
-  "serviceAreaName": "Pan India",
+  "serviceAreaName": "North India",
   "coordinates": {
     "latitude": null,
     "longitude": null,
     "status": "TODO(client): Add verified map coordinates before publishing."
   },
   "mapsLink": "https://www.google.com/maps/search/?api=1&query=NX+One+Gaur+City+Mall+Greater+Noida+West",
-  "serviceArea": ["Pan India"],
+  "serviceArea": ["North India"],
   "schemaServiceArea": { "@type": "Country", "name": "India" },
   "socials": [
     "https://www.facebook.com/people/Reliance-Engineering-Solutions/100085677601179/",
@@ -72,16 +72,16 @@
   ],
   "routes": ["/", "/about", "/services", "/projects", "/gallery", "/contact", "/privacy-policy"],
   "services": [
-    { "slug": "swimming-pool", "name": "Swimming Pool Construction", "image": "/images/pool-aerial.jpg", "icon": "waves" },
-    { "slug": "jacuzzi", "name": "Jacuzzi Construction", "image": "/images/spa.jpg", "icon": "spa" },
-    { "slug": "waterproofing", "name": "Swimming Pool Waterproofing", "image": "/images/engineering.jpg", "icon": "shield" },
-    { "slug": "expansion-joints", "name": "Expansion Joint Treatment", "image": "/images/indoor-pool.jpg", "icon": "layers" },
-    { "slug": "spa-sauna-steam", "name": "Spa, Sauna & Steam", "image": "/images/sauna.jpg", "icon": "spa" },
-    { "slug": "tiles", "name": "Swimming Pool Tiles", "image": "/images/water-texture.jpg", "icon": "grid" },
-    { "slug": "water-fountains", "name": "Water Fountains", "image": "/images/fountain.jpg", "icon": "droplets" },
-    { "slug": "water-features", "name": "Water Features", "image": "/images/fountain.jpg", "icon": "sparkles" },
-    { "slug": "pool-heating", "name": "Pool Heating & Heat Pumps", "image": "/images/indoor-pool.jpg", "icon": "thermometer" },
-    { "slug": "pool-lighting", "name": "Swimming Pool Lighting", "image": "/images/fountain.jpg", "icon": "sparkles" },
-    { "slug": "pool-renovation", "name": "Swimming Pool Renovation", "image": "/images/water-texture.jpg", "icon": "wrench" }
+    { "slug": "swimming-pool", "name": "Swimming Pool Construction", "image": "/images/pool-aerial.jpg", "media": { "type": "image", "src": "/images/pool-aerial.jpg" }, "icon": "waves" },
+    { "slug": "jacuzzi", "name": "Jacuzzi Construction", "image": "/images/spa.jpg", "media": { "type": "image", "src": "/images/spa.jpg" }, "icon": "spa" },
+    { "slug": "waterproofing", "name": "Swimming Pool Waterproofing", "image": "/images/engineering.jpg", "media": { "type": "image", "src": "/images/engineering.jpg" }, "icon": "shield" },
+    { "slug": "expansion-joints", "name": "Expansion Joint Treatment", "image": "/images/indoor-pool.jpg", "media": { "type": "image", "src": "/images/indoor-pool.jpg" }, "icon": "layers" },
+    { "slug": "spa-sauna-steam", "name": "Spa, Sauna & Steam", "image": "/images/sauna.jpg", "media": { "type": "image", "src": "/images/sauna.jpg" }, "icon": "spa" },
+    { "slug": "tiles", "name": "Swimming Pool Tiles", "image": "/images/water-texture.jpg", "media": { "type": "image", "src": "/images/water-texture.jpg" }, "icon": "grid" },
+    { "slug": "water-fountains", "name": "Water Fountains", "image": "/images/fountain.jpg", "media": { "type": "image", "src": "/images/fountain.jpg" }, "icon": "droplets" },
+    { "slug": "water-features", "name": "Water Features", "image": "/images/fountain.jpg", "media": { "type": "image", "src": "/images/fountain.jpg" }, "icon": "sparkles" },
+    { "slug": "pool-heating", "name": "Pool Heating & Heat Pumps", "image": "/images/indoor-pool.jpg", "media": { "type": "image", "src": "/images/indoor-pool.jpg" }, "icon": "thermometer" },
+    { "slug": "pool-lighting", "name": "Swimming Pool Lighting", "image": "/images/fountain.jpg", "media": { "type": "image", "src": "/images/fountain.jpg" }, "icon": "sparkles" },
+    { "slug": "pool-renovation", "name": "Swimming Pool Renovation", "image": "/images/water-texture.jpg", "media": { "type": "image", "src": "/images/water-texture.jpg" }, "icon": "wrench" }
   ]
 }

@@ -124,7 +124,7 @@ export function Logo({ compact = false }: { compact?: boolean }) {
         </span>
         {!compact && (
           <span className="mt-0.5 block text-[9px] font-500 uppercase tracking-[0.26em] text-mist">
-            Water Engineering
+            Reliance Engineering Solutions
           </span>
         )}
       </span>

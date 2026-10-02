@@ -26,6 +26,7 @@ import type { LucideIcon } from 'lucide-react'
 import SEO from '../components/SEO'
 import { pageSEO, serviceSEO } from '../config/seo'
 import { SITE_URL, siteProfile } from '../config/site'
+import MediaRenderer from '../components/MediaRenderer'
 
 export const iconMap: Record<string, LucideIcon> = {
   waves: Waves,
@@ -196,11 +197,11 @@ export function ServicesPage() {
               >
                 <div className={`relative ${flip ? 'lg:order-2' : ''}`}>
                   <div className="group relative overflow-hidden rounded-[28px] border border-white/10">
-                    <img
-                      src={s.image}
+                    <MediaRenderer
+                      media={s.media}
+                      fallbackSrc={s.image}
                       alt={`${s.title} service in ${siteProfile.serviceAreaName}`}
                       className="aspect-[4/3] w-full object-cover transition-transform duration-[1200ms] group-hover:scale-[1.07]"
-                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-abyss/72 via-transparent to-transparent" />
 
@@ -441,11 +442,11 @@ export function ServiceDetail() {
               </div>
 
               <div className="mt-6 overflow-hidden rounded-[22px] border border-white/10">
-                <img
-                  src={service.image}
+                <MediaRenderer
+                  media={service.media}
+                  fallbackSrc={service.image}
                   alt={`${service.title} in ${siteProfile.serviceAreaName}`}
                   className="aspect-[4/3] w-full object-cover"
-                  loading="lazy"
                 />
               </div>
             </div>
@@ -481,11 +482,12 @@ export function ServiceDetail() {
                   className="group overflow-hidden rounded-[24px] border border-white/10 bg-white/[0.036] transition-all duration-500 hover:-translate-y-2 hover:border-aqua/30"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden">
-                    <img
-                      src={s.image}
+                    <MediaRenderer
+                      media={s.media}
+                      fallbackSrc={s.image}
                       alt={`${s.title} service in ${siteProfile.serviceAreaName}`}
                       className="h-full w-full object-cover transition-transform duration-[900ms] group-hover:scale-[1.08]"
-                      loading="lazy"
+                      wrapperClassName="absolute inset-0"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-abyss/86 to-transparent" />
                     <span className="absolute bottom-4 left-5 grid h-11 w-11 place-items-center rounded-xl border border-white/18 bg-abyss/55 text-aqua backdrop-blur-md">

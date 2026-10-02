@@ -15,6 +15,7 @@ import { useEffect, useRef } from 'react'
 import SEO from '../components/SEO'
 import { pageSEO } from '../config/seo'
 import { siteProfile } from '../config/site'
+import MediaRenderer from '../components/MediaRenderer'
 
 /* ============================ PROJECTS ============================ */
 const categories = ['All', 'Residential', 'Commercial', 'Hospitality', 'Institutional']
@@ -70,7 +71,7 @@ export function ProjectsPage() {
         <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
           {[
               { icon: Layers3, label: 'Design + construction' },
-              { icon: MapPin, label: 'Delhi NCR service area' },
+              { icon: MapPin, label: 'North India service area' },
               { icon: Clock3, label: 'Engineering solutions' },
           ].map((f) => (
             <div key={f.label} className="flex items-center gap-3 text-cream/88">
@@ -126,11 +127,12 @@ export function ProjectsPage() {
                 className="group relative overflow-hidden rounded-[26px] border border-white/10 bg-white/[0.032] transition-all duration-500 hover:-translate-y-2 hover:border-aqua/30"
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
-                  <img
-                    src={p.image}
+                  <MediaRenderer
+                    media={p.media}
+                    fallbackSrc={p.image}
                     alt={`${p.title}, ${p.category} swimming pool project`}
                     className="h-full w-full object-cover transition-transform duration-[1100ms] group-hover:scale-[1.1]"
-                    loading="lazy"
+                    wrapperClassName="absolute inset-0"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-abyss via-abyss/22 to-transparent" />
 
@@ -356,13 +358,13 @@ export function GalleryPage() {
                   i % 5 === 0 ? 'lg:row-span-2' : ''
                 }`}
               >
-                <img
-                  src={g.src}
+                <MediaRenderer
+                  media={g.media}
+                  fallbackSrc={g.src}
                   alt={`${g.caption}, ${g.tag}`}
                   className={`w-full object-cover transition-transform duration-[1100ms] group-hover:scale-[1.1] ${
                     i % 5 === 0 ? 'aspect-[3/4] lg:aspect-[3/5]' : 'aspect-[4/3]'
                   }`}
-                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-abyss/88 via-abyss/12 to-transparent opacity-82 transition-opacity duration-500 group-hover:opacity-96" />
 
@@ -431,8 +433,9 @@ export function GalleryPage() {
           </button>
 
           <figure className="max-w-5xl">
-            <img
-              src={filtered[lightbox].src}
+            <MediaRenderer
+              media={filtered[lightbox].media}
+              fallbackSrc={filtered[lightbox].src}
               alt={`${filtered[lightbox].caption}, ${filtered[lightbox].tag}`}
               className="max-h-[74vh] w-full rounded-[22px] object-contain"
             />

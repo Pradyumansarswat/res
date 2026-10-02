@@ -1,4 +1,5 @@
 import { siteProfile } from '../config/site'
+import type { Media } from '../components/MediaRenderer'
 
 export const site = {
   name: siteProfile.shortName,
@@ -29,6 +30,7 @@ export type Service = {
   description: string
   features: string[]
   image: string
+  media: Media
   icon: string
   stat: { value: string; label: string }
 }
@@ -36,6 +38,9 @@ export type Service = {
 // TODO(client): Add confirmed deliverables, project details and service-specific copy.
 export const services: Service[] = siteProfile.services.map((service) => ({
   ...service,
+  media: service.media.type === 'youtube'
+    ? { type: 'youtube', src: service.media.src }
+    : { type: 'image', src: service.media.src },
   title: service.name,
   short: `${service.name} services from ${siteProfile.name} in ${siteProfile.serviceAreaName}. Contact RES to discuss your site and project requirements.`,
   description: `${service.name} services in ${siteProfile.serviceAreaName} from ${siteProfile.name}. Contact the RES team to discuss your site and project requirements.`,
@@ -63,7 +68,7 @@ export const values = [
 
 export const stats = [
   { value: 0, suffix: '', label: 'Established', prefix: '', display: String(siteProfile.established) },
-  { value: 0, suffix: '', label: 'Service area', prefix: '', display: 'Delhi NCR' },
+  { value: 0, suffix: '', label: 'Service area', prefix: '', display: 'North India' },
   { value: 0, suffix: '', label: 'Swimming pool construction', prefix: '', display: 'Pools' },
   { value: 0, suffix: '', label: 'Swimming pool renovation', prefix: '', display: 'Renovation' },
   { value: 0, suffix: '', label: 'Pool heating', prefix: '', display: 'Heat pumps' },
@@ -99,6 +104,7 @@ export type Project = {
   location: string
   scope: string
   image: string
+  media?: Media
 }
 
 // TODO(client): Add real project details, locations, images and permissions.
@@ -114,7 +120,7 @@ export const faqs = [
   },
   {
     q: 'Which areas does RES serve?',
-    a: 'RES serves Delhi NCR, including Delhi, Noida, Gurugram, Ghaziabad and Faridabad.',
+    a: 'RES serves North India, including Delhi, Noida, Gurugram, Ghaziabad and Faridabad.',
   },
   {
     q: 'What kind of maintenance support do you provide?',
@@ -159,14 +165,14 @@ export const navLinks = [
   { label: 'Contact', to: '/contact' },
 ]
 
-export const galleryImages = [
-  { src: '/images/hero-pool.jpg', caption: 'Residential pool solutions', tag: 'Residential Pools' },
-  { src: '/images/pool-aerial.jpg', caption: 'Commercial pool solutions', tag: 'Commercial Pools' },
-  { src: '/images/fountain.jpg', caption: 'Pool lighting solutions', tag: 'Pool Lighting' },
-  { src: '/images/spa.jpg', caption: 'Jacuzzi pool solutions', tag: 'Jacuzzi Pools' },
-  { src: '/images/sauna.jpg', caption: 'Pool engineering solutions', tag: 'Engineering' },
-  { src: '/images/indoor-pool.jpg', caption: 'Pool heating solutions', tag: 'Pool Heating' },
-  { src: '/images/water-texture.jpg', caption: 'Pool surface solutions', tag: 'Pool Renovation' },
-  { src: '/images/engineering.jpg', caption: 'Technical planning', tag: 'Engineering' },
-  { src: '/images/team.jpg', caption: siteProfile.name, tag: 'RES' },
+export const galleryImages: { src: string; media: Media; caption: string; tag: string }[] = [
+  { src: '/images/hero-pool.jpg', media: { type: 'youtube', src: 'https://www.youtube.com/watch?v=aqz-KE-bpKQ' }, caption: 'Residential pool solutions', tag: 'Residential Pools' },
+  { src: '/images/pool-aerial.jpg', media: { type: 'youtube', src: 'https://www.youtube.com/watch?v=aqz-KE-bpKQ' }, caption: 'Commercial pool solutions', tag: 'Commercial Pools' },
+  { src: '/images/fountain.jpg', media: { type: 'image', src: '/images/fountain.jpg' }, caption: 'Pool lighting solutions', tag: 'Pool Lighting' },
+  { src: '/images/spa.jpg', media: { type: 'image', src: '/images/spa.jpg' }, caption: 'Jacuzzi pool solutions', tag: 'Jacuzzi Pools' },
+  { src: '/images/sauna.jpg', media: { type: 'image', src: '/images/sauna.jpg' }, caption: 'Pool engineering solutions', tag: 'Engineering' },
+  { src: '/images/indoor-pool.jpg', media: { type: 'image', src: '/images/indoor-pool.jpg' }, caption: 'Pool heating solutions', tag: 'Pool Heating' },
+  { src: '/images/water-texture.jpg', media: { type: 'image', src: '/images/water-texture.jpg' }, caption: 'Pool surface solutions', tag: 'Pool Renovation' },
+  { src: '/images/engineering.jpg', media: { type: 'image', src: '/images/engineering.jpg' }, caption: 'Technical planning', tag: 'Engineering' },
+  { src: '/images/team.jpg', media: { type: 'youtube', src: 'https://www.youtube.com/watch?v=aqz-KE-bpKQ' }, caption: siteProfile.name, tag: 'RES' },
 ]
