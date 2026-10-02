@@ -277,7 +277,7 @@ export default function Home() {
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-bright" />
                 </span>
                 <span className="text-[10.5px] font-700 uppercase tracking-[0.24em] text-bright">
-                  Est. {siteProfile.established} · New Delhi · {siteProfile.serviceAreaName}
+                  Est. {siteProfile.established} · Noida · {siteProfile.serviceAreaName}
                 </span>
               </div>
 
