@@ -5,6 +5,7 @@ import Footer from './components/organisms/Footer'
 import { useSmoothScroll, scrollToTop, ScrollTrigger, gsap } from './lib/anim'
 import ParticleCursor from './components/ParticleCursor'
 import PoolLoader from './components/PoolLoader'
+import WhatsAppButton from './components/WhatsAppButton'
 import { lazyMin } from './lib/lazyMin'
 
 const Home = lazyMin(() => import('./pages/Home'))
@@ -180,6 +181,7 @@ function AppRoutes() {
         </main>
 
         <Footer />
+        <WhatsAppButton />
       </div>
     </div>
   )

@@ -66,7 +66,7 @@ export function ProjectsPage() {
         title="Engineered work that"
         highlight="speaks for itself"
         description={`Explore swimming pool and water engineering applications supported by ${siteProfile.name}. Contact ${siteProfile.shortName} to discuss a project requirement.`}
-        image="/images/hero-pool.jpg"
+        image="/images/hero-pool.jpeg"
       >
         <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
           {[

@@ -166,13 +166,13 @@ export const navLinks = [
 ]
 
 export const galleryImages: { src: string; media: Media; caption: string; tag: string }[] = [
-  { src: '/images/hero-pool.jpg', media: { type: 'youtube', src: 'https://www.youtube.com/watch?v=aqz-KE-bpKQ' }, caption: 'Residential pool solutions', tag: 'Residential Pools' },
-  { src: '/images/pool-aerial.jpg', media: { type: 'youtube', src: 'https://www.youtube.com/watch?v=aqz-KE-bpKQ' }, caption: 'Commercial pool solutions', tag: 'Commercial Pools' },
-  { src: '/images/fountain.jpg', media: { type: 'image', src: '/images/fountain.jpg' }, caption: 'Pool lighting solutions', tag: 'Pool Lighting' },
+  { src: '/images/hero-pool.jpeg', media: { type: 'youtube', src: 'https://youtube.com/shorts/sCjB5lbZpZM' }, caption: 'Residential pool solutions', tag: 'Residential Pools' },
+  { src: '/images/pool-aerial.jpg', media: { type: 'youtube', src: 'https://youtube.com/shorts/EmotFhC4RUw?si=zmVultDbAI9Qz7if' }, caption: 'Commercial pool solutions', tag: 'Commercial Pools' },
+  { src: '/images/fountain.jpg', media: { type: 'image', src: '/images/fountain.jpeg' }, caption: 'Pool lighting solutions', tag: 'Pool Lighting' },
   { src: '/images/spa.jpg', media: { type: 'image', src: '/images/spa.jpg' }, caption: 'Jacuzzi pool solutions', tag: 'Jacuzzi Pools' },
-  { src: '/images/sauna.jpg', media: { type: 'image', src: '/images/sauna.jpg' }, caption: 'Pool engineering solutions', tag: 'Engineering' },
+  { src: '/images/sauna.jpg', media: { type: 'image', src: '/images/sauna.jpeg' }, caption: 'Pool engineering solutions', tag: 'Engineering' },
   { src: '/images/indoor-pool.jpg', media: { type: 'image', src: '/images/indoor-pool.jpg' }, caption: 'Pool heating solutions', tag: 'Pool Heating' },
   { src: '/images/water-texture.jpg', media: { type: 'image', src: '/images/water-texture.jpg' }, caption: 'Pool surface solutions', tag: 'Pool Renovation' },
   { src: '/images/engineering.jpg', media: { type: 'image', src: '/images/engineering.jpg' }, caption: 'Technical planning', tag: 'Engineering' },
-  { src: '/images/team.jpg', media: { type: 'youtube', src: 'https://www.youtube.com/watch?v=aqz-KE-bpKQ' }, caption: siteProfile.name, tag: 'RES' },
+  { src: '/images/team.jpg', media: { type: 'image', src: '/images/res.jpeg' }, caption: siteProfile.name, tag: 'RES' },
 ]

@@ -105,7 +105,7 @@ export function ContactPage() {
         title="Let us build something"
         highlight="extraordinary"
         description={`Contact ${siteProfile.name} to discuss pool construction, heating, lighting, waterproofing or water feature requirements in ${siteProfile.serviceAreaName}.`}
-        image="/images/spa.jpg"
+        image="/images/pool-contact.jpg"
       >
         <div className="flex flex-wrap gap-4">
           <a
@@ -581,8 +581,8 @@ export function ContactPage() {
             <div className="relative">
               <div className="overflow-hidden rounded-[28px] border border-white/10">
                 <img
-                  src="/images/indoor-pool.jpg"
-                  alt="Indoor swimming pool"
+                  src="/images/pool-contact.jpg"
+                  alt="RES office in Noida, India"
                   className="aspect-[4/3] w-full object-cover"
                   loading="lazy"
                 />

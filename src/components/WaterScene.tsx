@@ -294,7 +294,7 @@ export default function WaterScene({
       className={`relative h-screen w-full overflow-hidden bg-black ${className}`}
     >
       <img
-        src="/images/hero-pool.jpg"
+        src="/images/hero-pool.jpeg"
         alt=""
         aria-hidden="true"
         className="absolute inset-0 h-full w-full object-cover"

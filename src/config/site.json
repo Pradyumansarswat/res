@@ -37,7 +37,7 @@
   },
   "mapsLink": "https://www.google.com/maps/search/?api=1&query=NX+One+Gaur+City+Mall+Greater+Noida+West",
   "serviceArea": ["North India"],
-  "schemaServiceArea": { "@type": "Country", "name": "India" },
+  "schemaServiceArea": { "@type": "Country", "name": "North India" },
   "socials": [
     "https://www.facebook.com/people/Reliance-Engineering-Solutions/100085677601179/",
     "https://www.youtube.com/channel/UCS_0xslbtEoAsN2UrXo5IpA",
@@ -72,16 +72,16 @@
   ],
   "routes": ["/", "/about", "/services", "/projects", "/gallery", "/contact", "/privacy-policy"],
   "services": [
-    { "slug": "swimming-pool", "name": "Swimming Pool Construction", "image": "/images/pool-aerial.jpg", "media": { "type": "image", "src": "/images/pool-aerial.jpg" }, "icon": "waves" },
-    { "slug": "jacuzzi", "name": "Jacuzzi Construction", "image": "/images/spa.jpg", "media": { "type": "image", "src": "/images/spa.jpg" }, "icon": "spa" },
-    { "slug": "waterproofing", "name": "Swimming Pool Waterproofing", "image": "/images/engineering.jpg", "media": { "type": "image", "src": "/images/engineering.jpg" }, "icon": "shield" },
-    { "slug": "expansion-joints", "name": "Expansion Joint Treatment", "image": "/images/indoor-pool.jpg", "media": { "type": "image", "src": "/images/indoor-pool.jpg" }, "icon": "layers" },
-    { "slug": "spa-sauna-steam", "name": "Spa, Sauna & Steam", "image": "/images/sauna.jpg", "media": { "type": "image", "src": "/images/sauna.jpg" }, "icon": "spa" },
+    { "slug": "swimming-pool", "name": "Swimming Pool Construction", "image": "/images/swimming-pool-construction.jpg", "media": { "type": "image", "src": "/images/swimming-pool-construction.jpg" }, "icon": "waves" },
+    { "slug": "jacuzzi", "name": "Jacuzzi Construction", "image": "/images/Jacuzzi-construction.jpg", "media": { "type": "image", "src": "/images/Jacuzzi-construction.jpg" }, "icon": "spa" },
+    { "slug": "waterproofing", "name": "Swimming Pool Waterproofing", "image": "/images/pool-Waterproofing.jpg", "media": { "type": "image", "src": "/images/pool-Waterproofing.jpg" }, "icon": "shield" },
+    { "slug": "expansion-joints", "name": "Expansion Joint Treatment", "image": "/images/Expansion-joint-treatment.jpg", "media": { "type": "image", "src": "/images/Expansion-joint-treatment.jpg" }, "icon": "layers" },
+    { "slug": "spa-sauna-steam", "name": "Spa, Sauna & Steam", "image": "/images/spa-sauna.jpg", "media": { "type": "image", "src": "/images/spa-sauna.jpg" }, "icon": "spa" },
     { "slug": "tiles", "name": "Swimming Pool Tiles", "image": "/images/water-texture.jpg", "media": { "type": "image", "src": "/images/water-texture.jpg" }, "icon": "grid" },
-    { "slug": "water-fountains", "name": "Water Fountains", "image": "/images/fountain.jpg", "media": { "type": "image", "src": "/images/fountain.jpg" }, "icon": "droplets" },
-    { "slug": "water-features", "name": "Water Features", "image": "/images/fountain.jpg", "media": { "type": "image", "src": "/images/fountain.jpg" }, "icon": "sparkles" },
+    { "slug": "water-fountains", "name": "Water Fountains", "image": "/images/water-fountain.jpg", "media": { "type": "image", "src": "/images/water-fountain.jpg" }, "icon": "droplets" },
+    { "slug": "water-features", "name": "Water Features", "image": "/images/water-feature.jpeg", "media": { "type": "image", "src": "/images/water-feature.jpeg" }, "icon": "sparkles" },
     { "slug": "pool-heating", "name": "Pool Heating & Heat Pumps", "image": "/images/indoor-pool.jpg", "media": { "type": "image", "src": "/images/indoor-pool.jpg" }, "icon": "thermometer" },
-    { "slug": "pool-lighting", "name": "Swimming Pool Lighting", "image": "/images/fountain.jpg", "media": { "type": "image", "src": "/images/fountain.jpg" }, "icon": "sparkles" },
-    { "slug": "pool-renovation", "name": "Swimming Pool Renovation", "image": "/images/water-texture.jpg", "media": { "type": "image", "src": "/images/water-texture.jpg" }, "icon": "wrench" }
+    { "slug": "pool-lighting", "name": "Swimming Pool Lighting", "image": "/images/swimming-pool-lighting.jpg", "media": { "type": "image", "src": "/images/swimming-pool-lighting.jpg" }, "icon": "sparkles" },
+    { "slug": "pool-renovation", "name": "Swimming Pool Renovation", "image": "/images/swimming-pool-renovation.jpg", "media": { "type": "image", "src": "/images/swimming-pool-renovation.jpg" }, "icon": "wrench" }
   ]
 }

@@ -54,29 +54,29 @@ const motionPanels: { tag: string; title: string; text: string; image: string; m
     tag: 'Design & Drawing',
     title: 'Pool design and architecture',
     text: 'Swimming pool design, layout planning, architectural planning, technical planning and 3D visualization.',
-    image: '/images/engineering.jpg',
-    media: { type: 'image', src: '/images/engineering.jpg' },
+    image: '/images/pool-design.jpeg',
+    media: { type: 'image', src: '/images/pool-design.jpeg' },
   },
   {
     tag: 'Construction',
     title: 'Swimming pool construction',
     text: 'Construction solutions covering structure, waterproofing, finishing, equipment installation and commissioning.',
-    image: '/images/indoor-pool.jpg',
-    media: { type: 'image', src: '/images/indoor-pool.jpg' },
+    image: '/images/pool-construction.webp',
+    media: { type: 'image', src: '/images/pool-construction.webp' },
   },
   {
     tag: 'Pool Heating',
     title: 'Comfortable pool temperatures',
     text: 'Pool heating solutions including heat pumps, heat exchangers and electrical pool heaters.',
-    image: '/images/indoor-pool.jpg',
-    media: { type: 'image', src: '/images/indoor-pool.jpg' },
+    image: '/images/pool-temperature.jpg',
+    media: { type: 'image', src: '/images/pool-temperature.jpg' },
   },
   {
     tag: 'Pool Lighting',
     title: 'Pool lighting systems',
     text: 'LED pool lights, underwater LED lights, fountain lights and pool lighting systems.',
-    image: '/images/fountain.jpg',
-    media: { type: 'image', src: '/images/fountain.jpg' },
+    image: '/images/fountain.jpeg',
+    media: { type: 'image', src: '/images/fountain.jpeg' },
   },
   {
     tag: 'Engineering',
@@ -396,8 +396,8 @@ export default function Home() {
           <div className="relative">
             <div className="relative rounded-[30px] border border-abyss/10 bg-abyss/6 p-3">
               <ParallaxFrame
-                src="/images/hero-pool.jpg"
-                media={{ type: 'image', src: '/images/hero-pool.jpg' }}
+                src="/images/hero-pool.jpeg"
+                media={{ type: 'image', src: '/images/hero-pool.jpeg' }}
                 alt="Swimming pool"
                 ratio="aspect-[5/6]"
                 className="rounded-[22px]"
@@ -407,7 +407,7 @@ export default function Home() {
                 <MediaRenderer
                   media={{
                     type: 'youtube',
-                    src: 'https://www.youtube.com/embed/4ZM-rod0GhQ?si=zqAJuglHapqTdN85',
+                    src: 'https://youtube.com/shorts/EmotFhC4RUw?si=QWQBNghBVVgmZarb',
                   }}
                   fallbackSrc="/images/water-texture.jpg"
                   alt="Water texture"

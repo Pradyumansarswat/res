@@ -109,7 +109,7 @@ export default function About() {
         title="Engineering water with"
         highlight="precision & pride"
         description={`Established in ${siteProfile.established}, ${siteProfile.name} serves swimming pool and water engineering requirements across ${siteProfile.serviceAreaName}.`}
-        image="/images/indoor-pool.jpg"
+        image="/images/pool-about-hero.jpg"
       >
         <div className="flex flex-wrap gap-4">
           <Link

@@ -35,7 +35,7 @@ function businessSchema() {
     name: siteProfile.name,
     url: SITE_URL,
     logo: absoluteUrl('/images/logo.svg'),
-    image: absoluteUrl('/images/hero-pool.jpg'),
+    image: absoluteUrl('/images/hero-pool.jpeg'),
     telephone: siteProfile.phone,
     email: siteProfile.email,
     address: {
@@ -72,7 +72,7 @@ export default function SEO({
   title,
   description,
   path,
-  image = '/images/hero-pool.jpg',
+  image = '/images/hero-pool.jpeg',
   type = 'website',
   noindex = false,
   structuredData,

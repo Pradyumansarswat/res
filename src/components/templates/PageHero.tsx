@@ -145,7 +145,7 @@ export function PageHero({
   }, [])
 
   return (
-    <section className="relative isolate flex min-h-[74vh] items-end overflow-hidden pb-16 pt-36 sm:pt-40">
+    <section className="relative isolate flex min-h-[100vh] items-end overflow-hidden pb-16 pt-36 sm:pt-40">
       <div ref={imgWrap} className="absolute inset-0 -z-10">
         <img
           src={image}
