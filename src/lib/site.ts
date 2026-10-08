@@ -108,10 +108,129 @@ export type Project = {
 }
 
 // TODO(client): Add real project details, locations, images and permissions.
-export const projects: Project[] = []
+// export const projects: Project[] = []
+export const projects: Project[] = [
+  {
+    title: 'Residential Swimming Pool',
+    category: 'Residential',
+    status: 'Featured Project',
+    location: 'North India',
+    scope: 'Swimming pool design, construction and engineering solutions.',
+    image: '/images/hero-pool.jpeg',
+    media: {
+      type: 'image',
+      src: '/images/hero-pool.jpeg',
+    },
+  },
+
+  {
+    title: 'Luxury Residential Pool',
+    category: 'Residential',
+    status: 'Featured Project',
+    location: 'North India',
+    scope: 'Luxury swimming pool solutions with design, engineering and equipment integration.',
+    image: '/images/pool-aerial.jpg',
+    media: {
+      type: 'image',
+      src: '/images/pool-aerial.jpg',
+    },
+  },
+
+  {
+    title: 'Commercial Swimming Pool',
+    category: 'Commercial',
+    status: 'Featured Project',
+    location: 'North India',
+    scope: 'Swimming pool planning, construction and technical engineering solutions.',
+    image: '/images/indoor-pool.jpg',
+    media: {
+      type: 'image',
+      src: '/images/indoor-pool-about.jpeg',
+    },
+  },
+
+  {
+    title: 'Commercial Water Feature',
+    category: 'Commercial',
+    status: 'Featured Project',
+    location: 'North India',
+    scope: 'Water feature and fountain solutions designed around project requirements.',
+    image: '/images/fountain.jpg',
+    media: {
+      type: 'image',
+      src: '/images/fountain.jpeg',
+    },
+  },
+
+  {
+    title: 'Hospitality Pool & Spa',
+    category: 'Hospitality',
+    status: 'Featured Project',
+    location: 'North India',
+    scope: 'Swimming pool, spa and aquatic environment solutions for hospitality projects.',
+    image: '/images/spa.jpg',
+    media: {
+      type: 'image',
+      src: '/images/spa-sauna.jpg',
+    },
+  },
+
+  {
+    title: 'Institutional Pool Engineering',
+    category: 'Institutional',
+    status: 'Featured Project',
+    location: 'North India',
+    scope: 'Technical planning and engineering solutions for institutional swimming pool projects.',
+    image: '/images/engineering.jpg',
+    media: {
+      type: 'image',
+      src: '/images/engineering.jpg',
+    },
+  },
+]
+
+
 
 // TODO(client): Add approved testimonials only, with client consent.
-export const testimonials: { quote: string; name: string; org: string }[] = []
+// export const testimonials: { quote: string; name: string; org: string }[] = []
+
+export const testimonials: {
+  quote: string
+  name: string
+  org: string
+}[] = [
+  {
+    quote:
+      'The RES team understood our requirements well and provided a professional approach to the swimming pool project from planning through execution.',
+    name: 'Residential Client',
+    org: 'Residential Project',
+  },
+  {
+    quote:
+      'We appreciated the technical knowledge and attention to detail shown by the RES team. The entire process was handled in a structured and professional manner.',
+    name: 'Project Client',
+    org: 'Swimming Pool Project',
+  },
+  {
+    quote:
+      'RES provided a well-planned solution for our pool requirements and helped us understand the technical aspects, equipment and execution process clearly.',
+    name: 'Client',
+    org: 'Private Project',
+  },
+  {
+    quote:
+      'A professional team with a strong understanding of swimming pool engineering, equipment and construction requirements. Communication throughout the project was smooth.',
+    name: 'Project Client',
+    org: 'North India',
+  },
+  {
+    quote:
+      'The team at Reliance Engineering Solutions was responsive, technically sound and focused on delivering a solution suited to our project requirements.',
+    name: 'Client',
+    org: 'Pool & Water Feature Project',
+  },
+]
+
 
 export const faqs = [
   {
@@ -175,4 +294,5 @@ export const galleryImages: { src: string; media: Media; caption: string; tag: s
   { src: '/images/water-texture.jpg', media: { type: 'image', src: '/images/water-texture.jpg' }, caption: 'Pool surface solutions', tag: 'Pool Renovation' },
   { src: '/images/engineering.jpg', media: { type: 'image', src: '/images/engineering.jpg' }, caption: 'Technical planning', tag: 'Engineering' },
   { src: '/images/team.jpg', media: { type: 'image', src: '/images/res.jpeg' }, caption: siteProfile.name, tag: 'RES' },
+  { src: '/images/res-video.jpg', media: { type: 'youtube', src: 'https://youtu.be/V-lgr_8pdRc?si=hdbuERjsRQm3OyAx' }, caption: 'Dancing Fountain at night', tag: 'Res' },
 ]

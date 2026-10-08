@@ -311,7 +311,7 @@ export function GalleryPage() {
         title="A closer look at our"
         highlight="water craft"
         description="Pools, fountains, wellness suites, engineering on site and the details in between — a visual tour of the RES world."
-        image="/images/fountain.jpg"
+        image="/images/swimming-pool-lighting.jpg"
       />
 
       <section className="relative py-16 sm:py-20">
