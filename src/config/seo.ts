@@ -1,43 +1,47 @@
 import { siteProfile } from './site'
 
+const { name, shortName, owner, established, serviceAreaName: area } = siteProfile
+
 export const pageSEO = {
   home: {
-    title: `Swimming Pool Construction Across India | ${siteProfile.shortName}`,
-    description: `${siteProfile.name} builds and renovates swimming pools across India, with pool heating, lighting, waterproofing and water feature services.`,
+    title: `Swimming Pool Construction in Noida & ${area} | ${shortName}`,
+    description: `${name} builds and renovates swimming pools across ${area}, with pool heating, lighting, waterproofing and water feature services.`,
   },
   about: {
-    title: `About ${siteProfile.name} | ${siteProfile.shortName}`,
-    description: `Established in Noida in ${siteProfile.established}, ${siteProfile.name} is led by ${siteProfile.owner} and serves pool and water engineering needs across India.`,
+    title: `About ${name} | ${shortName}`,
+    description: `${name}, based in Noida and established in ${established}, is led by ${owner} and delivers pool and water engineering across ${area}.`,
   },
   services: {
-    title: `Pool & Water Engineering Services | ${siteProfile.shortName}`,
-    description: `Explore pool construction, renovation, heating, lighting, jacuzzi, waterproofing, spa, tiles, fountains and water feature services from RES across India.`,
+    title: `Pool & Water Engineering Services | ${shortName}`,
+    description: `Pool construction, renovation, heating, lighting, jacuzzi, waterproofing, spa, tiles, fountains and water features from ${shortName} across ${area}.`,
   },
   projects: {
-    title: `Swimming Pool Project Portfolio | ${siteProfile.shortName}`,
-    description: `${siteProfile.name} project portfolio. No project records are listed. Contact RES to discuss pool construction and renovation services across India.`,
+    title: `Swimming Pool Projects | ${shortName}`,
+    description: `Selected swimming pool, heating and renovation projects by ${name}. Contact ${shortName} to discuss your own pool project.`,
   },
   gallery: {
-    title: `Swimming Pool & Water Feature Gallery | ${siteProfile.shortName}`,
-    description: `Browse swimming pool, spa, fountain and engineering images. Contact RES to discuss pool construction, renovation, heating and lighting services across India.`,
+    title: `Swimming Pool & Water Feature Gallery | ${shortName}`,
+    description: `Browse swimming pool, spa, fountain and engineering images from ${name}.`,
   },
   contact: {
-    title: `Contact RES | Pool Services in Noida`,
-    description: `Contact ${siteProfile.name} in Noida for pool construction, renovation, heating, lighting and water engineering enquiries across India.`,
+    title: `Contact ${shortName} | Swimming Pool Services in Noida`,
+    description: `Contact ${name} in Noida for pool construction, renovation, heating, lighting and water engineering enquiries across ${area}.`,
   },
   notFound: {
-    title: `Page Not Found | ${siteProfile.name}`,
-    description: `The page could not be found. Return to the ${siteProfile.name} home page or browse pool construction, engineering services and contact information.`,
+    title: `Page Not Found | ${name}`,
+    description: `The page could not be found. Return to the ${name} home page.`,
   },
   privacy: {
-    title: `Privacy Policy | ${siteProfile.shortName}`,
-    description: `Read the privacy policy for ${siteProfile.name}. Contact RES in Noida with questions about personal information and website enquiries across India.`,
+    title: `Privacy Policy | ${shortName}`,
+    description: `Privacy policy for ${name}, covering personal information shared through website enquiries.`,
   },
 }
 
-export function serviceSEO(name: string) {
+export function serviceSEO(name: string, detail?: string) {
   return {
-    title: `${name} Service Across India | ${siteProfile.shortName}`,
-    description: `${name} across India from ${siteProfile.name} (${siteProfile.shortName}), established in ${siteProfile.established}. Contact our team to discuss project requirements.`,
+    title: `${name} in Noida & ${area} | ${siteProfile.shortName}`,
+    description: `${name} from ${siteProfile.name} across ${area}. ${
+      detail ?? 'Contact our team to discuss your site and project requirements.'
+    }`,
   }
 }

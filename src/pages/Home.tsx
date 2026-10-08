@@ -421,7 +421,7 @@ export default function Home() {
                   {siteProfile.established}
                 </p>
                 <p className="mt-1.5 text-[10px] font-700 uppercase tracking-[0.19em] text-abyss/62">
-                  Established in Delhi
+                  Established in Noida
                 </p>
               </div>
             </div>
