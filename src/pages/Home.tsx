@@ -731,7 +731,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Pool types"
             title="Solutions designed for"
-            highlight="different applications"
+            highlight="every space"
             text="Residential, commercial, hospitality and institutional swimming pool requirements supported by RES."
             light
             action={
