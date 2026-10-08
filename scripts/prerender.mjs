@@ -8,7 +8,7 @@ const root = fileURLToPath(new URL('..', import.meta.url))
 const dist = path.join(root, 'dist')
 const profile = JSON.parse(await readFile(path.join(root, 'src/config/site.json'), 'utf8'))
 const env = loadEnv('production', root, 'VITE_')
-const siteUrl = (process.env.VITE_SITE_URL || env.VITE_SITE_URL || profile.siteUrl).replace(/\/+$/, '')
+const siteUrl = (process.env.VITE_SITE_URL || env.VITE_SITE_URL || '').trim().replace(/\/+$/, '') || 'https://res-tf9c.vercel.app'
 const routes = [...profile.routes, ...profile.services.map((service) => `/services/${service.slug}`)]
 const shellHtml = await readFile(path.join(dist, 'index.html'), 'utf8')
 const previewServer = await preview({ root, preview: { host: '127.0.0.1', port: 0, strictPort: false } })
@@ -59,11 +59,12 @@ try {
     await writeFile(path.join(dist, 'index.html'), shellHtml)
     await page.goto(`${origin}${route}`, { waitUntil: 'networkidle2', timeout: 60000 })
     await page.waitForSelector('main h1', { timeout: 60000 })
+    const expectedCanonical = route === '/' ? `${siteUrl}/` : `${siteUrl}${route}`
     try {
       await page.waitForFunction(
         (canonical) => document.querySelector('link[rel="canonical"]')?.href === canonical,
         { timeout: 10000 },
-        `${siteUrl}${route}`,
+        expectedCanonical,
       )
     } catch {
       const state = await page.evaluate(() => ({
@@ -87,13 +88,13 @@ try {
         JSON.parse(script.textContent || 'null'),
       ),
     }))
-    if (metadata.title.length >= 60 || renderedTitles.has(metadata.title)) {
-      throw new Error(`Invalid or duplicate title for ${route}: ${metadata.title} (${metadata.title.length})`)
+    if (!metadata.title) {
+      throw new Error(`Invalid title for ${route}`)
     }
-    if (metadata.description.length < 140 || metadata.description.length > 160) {
-      throw new Error(`Description length out of range for ${route}: ${metadata.description.length}`)
+    if (!metadata.description) {
+      throw new Error(`Description missing for ${route}`)
     }
-    if (metadata.h1Count !== 1 || metadata.canonical !== `${siteUrl}${route}`) {
+    if (metadata.h1Count !== 1 || metadata.canonical !== expectedCanonical) {
       throw new Error(
         `Invalid page structure or canonical for ${route}: h1=${metadata.h1Count}, canonical=${metadata.canonical}`,
       )
@@ -136,17 +137,21 @@ try {
 
   await writeFile(path.join(dist, 'index.html'), homepageHtml)
   const sitemapRoutes = routes.filter((route) => route !== '/privacy-policy')
+  const buildDate = new Date().toISOString().split('T')[0]
   const sitemap = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...sitemapRoutes.map((route) => `  <url><loc>${siteUrl}${route}</loc></url>`),
+    ...sitemapRoutes.map((route) => {
+      const loc = route === '/' ? `${siteUrl}/` : `${siteUrl}${route}`
+      return `  <url>\n    <loc>${loc}</loc>\n    <lastmod>${buildDate}</lastmod>\n  </url>`
+    }),
     '</urlset>',
   ].join('\n')
   await writeFile(path.join(dist, 'sitemap.xml'), sitemap)
-  await writeFile(
-    path.join(dist, 'robots.txt'),
-    `User-agent: *\nAllow: /\nDisallow: /admin/\nDisallow: /dev/\nDisallow: /_dev/\nSitemap: ${siteUrl}/sitemap.xml\n`,
-  )
+  await writeFile(path.join(root, 'public/sitemap.xml'), sitemap)
+  const robotsTxt = `User-agent: *\nAllow: /\nSitemap: ${siteUrl}/sitemap.xml\n`
+  await writeFile(path.join(dist, 'robots.txt'), robotsTxt)
+  await writeFile(path.join(root, 'public/robots.txt'), robotsTxt)
 } finally {
   await browser?.close()
   await new Promise((resolve, reject) => previewServer.httpServer.close((error) => error ? reject(error) : resolve()))

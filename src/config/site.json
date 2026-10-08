@@ -1,7 +1,6 @@
 {
   "name": "Reliance Engineering Solutions",
   "shortName": "RES",
-  "siteUrl": "https://example.com",
   "owner": "Udit Keshari",
   "established": 2013,
   "business": [
@@ -37,7 +36,7 @@
   },
   "mapsLink": "https://www.google.com/maps/search/?api=1&query=NX+One+Gaur+City+Mall+Greater+Noida+West",
   "serviceArea": ["North India"],
-  "schemaServiceArea": { "@type": "Country", "name": "North India" },
+  "schemaServiceArea": { "@type": "Country", "name": "India" },
   "socials": [
     "https://www.facebook.com/people/Reliance-Engineering-Solutions/100085677601179/",
     "https://www.youtube.com/channel/UCS_0xslbtEoAsN2UrXo5IpA",

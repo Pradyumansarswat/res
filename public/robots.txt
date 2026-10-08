@@ -1,6 +1,3 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /dev/
-Disallow: /_dev/
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://res-tf9c.vercel.app/sitemap.xml

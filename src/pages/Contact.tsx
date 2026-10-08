@@ -325,7 +325,7 @@ export function ContactPage() {
                             name="email"
                             type="email"
                             className="field"
-                            placeholder="you@example.com"
+                            placeholder="name@email.com"
                             value={form.email}
                             onChange={(e) => setForm({ ...form, email: e.target.value })}
                           />
@@ -610,8 +610,8 @@ export function NotFound() {
       <SEO
         title={pageSEO.notFound.title}
         description={pageSEO.notFound.description}
-        path={window.location.pathname}
-        noindex
+        path={typeof window !== 'undefined' ? window.location.pathname : '/404'}
+        robots="noindex, follow"
       />
       <div className="absolute inset-0 -z-10">
         <img src="/images/water-texture.jpg" alt="" className="h-full w-full object-cover opacity-30" />
