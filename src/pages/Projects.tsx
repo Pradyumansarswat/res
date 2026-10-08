@@ -11,6 +11,7 @@ import {
 } from '../components/ui'
 import { useRefreshScrollTriggers, useStaggerReveal, gsap } from '../lib/anim'
 import { galleryImages, projects } from '../lib/site'
+import { ClientsGrid } from '../components/Clients'
 import { useEffect, useRef } from 'react'
 import SEO from '../components/SEO'
 import { pageSEO } from '../config/seo'
@@ -152,6 +153,18 @@ export function ProjectsPage() {
                     <MapPin className="h-3.5 w-3.5 text-aqua" strokeWidth={2.3} />
                     {p.location}
                   </div>
+
+                  {p.logo && (
+                    <div className="absolute bottom-5 right-5 flex h-11 w-20 items-center justify-center rounded-xl bg-white p-1.5 shadow-[0_4px_14px_-4px_rgba(0,0,0,0.35)]">
+                      <img
+                        src={p.logo}
+                        alt={`${p.title} logo`}
+                        className="max-h-full max-w-full object-contain"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 <div className="p-7">
@@ -184,6 +197,21 @@ export function ProjectsPage() {
               </p>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* ================= CLIENTS GRID ================= */}
+      <section className="section-deep noise relative overflow-hidden py-24 sm:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="Our Clients"
+            title="Clients we have"
+            highlight="worked with"
+            align="center"
+          />
+          <div className="mt-14">
+            <ClientsGrid />
+          </div>
         </div>
       </section>
 

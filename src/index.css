@@ -228,6 +228,27 @@ body {
   animation-play-state: paused;
 }
 
+/* ---------- Clients marquee ---------- */
+@keyframes clients-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.clients-marquee__track {
+  animation: clients-scroll 45s linear infinite;
+}
+.clients-marquee:hover .clients-marquee__track,
+.clients-marquee__track:focus {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .clients-marquee__track {
+    display: none !important;
+  }
+  .clients-marquee__static {
+    display: flex !important;
+  }
+}
+
 @keyframes float-y {
   0%,
   100% {

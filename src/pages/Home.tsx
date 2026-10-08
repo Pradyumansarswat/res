@@ -29,6 +29,7 @@ import {
   useStaggerReveal,
 } from '../lib/anim'
 import { process, projects, services, values } from '../lib/site'
+import { ClientsMarquee } from '../components/Clients'
 import type { LucideIcon } from 'lucide-react'
 import SEO from '../components/SEO'
 import { pageSEO } from '../config/seo'
@@ -492,6 +493,21 @@ export default function Home() {
       </section>
 
       <StatsBand light />
+
+      {/* ================= TRUSTED BY ================= */}
+      <section className="section-deep noise relative overflow-hidden py-20 sm:py-24">
+        <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
+          <SectionHeading
+            eyebrow="Our Clients"
+            title="Trusted by builders, hotels and"
+            highlight="institutions"
+            align="center"
+          />
+          <div className="mt-14">
+            <ClientsMarquee />
+          </div>
+        </div>
+      </section>
 
       {/* ================= SERVICES ================= */}
       <section className="section-deep noise relative overflow-hidden py-24 sm:py-32">
