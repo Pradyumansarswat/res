@@ -34,7 +34,7 @@
     "longitude": null,
     "status": "TODO(client): Add verified map coordinates before publishing."
   },
-  "mapsLink": "https://www.google.com/maps/search/?api=1&query=NX+One+Gaur+City+Mall+Greater+Noida+West",
+  "mapsLink": "https://maps.app.goo.gl/F6JNFmyUfDsBWa5d9",
   "serviceArea": ["North India"],
   "schemaServiceArea": { "@type": "Country", "name": "India" },
   "socials": [

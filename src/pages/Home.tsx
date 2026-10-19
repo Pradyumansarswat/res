@@ -408,7 +408,7 @@ export default function Home() {
                 <MediaRenderer
                   media={{
                     type: 'youtube',
-                    src: 'https://youtube.com/shorts/EmotFhC4RUw?si=QWQBNghBVVgmZarb',
+                    src: 'https://youtu.be/5HIah7gfPlE',
                   }}
                   fallbackSrc="/images/water-texture.jpg"
                   alt="Water texture"

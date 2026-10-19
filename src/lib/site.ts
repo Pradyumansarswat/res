@@ -294,8 +294,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Chattarpur, New Delhi",
     scope: "Swimming Pool",
-    image: "/images/hero-pool.jpeg",
-    media: { type: "image", src: "/images/hero-pool.jpeg" },
+    image: "/images/projects/murliwala-farm.jpg",
+    media: { type: "image", src: "/images/projects/murliwala-farm.jpg" },
   },
   {
     title: "Dr. Arvind Dahiya",
@@ -303,8 +303,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Rohtak, Haryana",
     scope: "Swimming Pool Heating System",
-    image: "/images/indoor-pool.jpg",
-    media: { type: "image", src: "/images/indoor-pool.jpg" },
+    image: "/images/projects/Res-swimming-pool-heatingsystem-client-Arvind-Dahiya.jpeg",
+    media: { type: "image", src: "/images/projects/Res-swimming-pool-heatingsystem-client-Arvind-Dahiya.jpeg" },
   },
   {
     title: "Anish Ahmed",
@@ -312,8 +312,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Mayur Vihar Phase-1, New Delhi",
     scope: "Swimming Pool",
-    image: "/images/hero-pool.jpeg",
-    media: { type: "image", src: "/images/hero-pool.jpeg" },
+    image: "/images/projects/Res-swimming-pool-client-anis-ahmed.jpeg",
+    media: { type: "image", src: "/images/projects/Res-swimming-pool-client-anis-ahmed.jpeg" },
   },
   {
     title: "Sham Lal & Sons",
@@ -321,8 +321,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Bhaktawarpur, New Delhi",
     scope: "Swimming Pool",
-    image: "/images/hero-pool.jpeg",
-    media: { type: "image", src: "/images/hero-pool.jpeg" },
+    image: "/images/projects/Res-swimming-pool-client-sham-lal-sons.jpeg",
+    media: { type: "image", src: "/images/projects/Res-swimming-pool-client-sham-lal-sons.jpeg" },
   },
   {
     title: "Akhilesh Chaturvedi",
@@ -330,8 +330,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Etawah, Uttar Pradesh",
     scope: "Swimming Pool",
-    image: "/images/hero-pool.jpeg",
-    media: { type: "image", src: "/images/hero-pool.jpeg" },
+    image: "/images/projects/Res-swimming-pool-client-akhilesh-chaturvedi.jpeg",
+    media: { type: "image", src: "/images/projects/Res-swimming-pool-client-akhilesh-chaturvedi.jpeg" },
   },
   {
     title: "Mr. JD Bedi",
@@ -339,8 +339,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Greater Noida, Uttar Pradesh",
     scope: "Swimming Pool Filtration",
-    image: "/images/engineering.jpg",
-    media: { type: "image", src: "/images/engineering.jpg" },
+    image: "/images/projects/Res-swimming-pool-filtration-client-jd-bedi.jpeg",
+    media: { type: "image", src: "/images/projects/Res-swimming-pool-filtration-client-jd-bedi.jpeg" },
   },
   {
     title: "Mr. Pratul Potdar",
@@ -348,8 +348,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Vapi, Gujarat",
     scope: "Swimming Pool Filtration",
-    image: "/images/engineering.jpg",
-    media: { type: "image", src: "/images/engineering.jpg" },
+    image: "/images/projects/Res-swimming-pool-filtration-client-pratul-potdar.jpeg",
+    media: { type: "image", src: "/images/projects/Res-swimming-pool-filtration-client-pratul-potdar.jpeg" },
   },
 
   /* ---------------- Commercial ---------------- */
@@ -359,8 +359,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Kanpur, Uttar Pradesh",
     scope: "Water Body",
-    image: "/images/fountain.jpg",
-    media: { type: "image", src: "/images/fountain.jpeg" },
+    image: "/images/projects/Commercial-waterbody-bios-landscape.jpeg",
+    media: { type: "image", src: "/images/projects/Commercial-waterbody-bios-landscape.jpeg" },
   },
   {
     title: "Ashok Construction",
@@ -368,8 +368,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Shahpur Jat, New Delhi",
     scope: "Swimming Pool",
-    image: "/images/hero-pool.jpeg",
-    media: { type: "image", src: "/images/hero-pool.jpeg" },
+    image: "/images/projects/Commercial-swimming-pool-ashok-construction.jpeg",
+    media: { type: "image", src: "/images/projects/Commercial-swimming-pool-ashok-construction.jpeg" },
   },
   {
     title: "Gold Star",
@@ -377,8 +377,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Sector-110, Noida, Uttar Pradesh",
     scope: "Expansion Joints",
-    image: "/images/engineering.jpg",
-    media: { type: "image", src: "/images/engineering.jpg" },
+    image: "/images/projects/Commercial-expansion-joints-gold-star.jpeg",
+    media: { type: "image", src: "/images/projects/Commercial-expansion-joints-gold-star.jpeg" },
   },
   {
     title: "Shapoorji Pallonji",
@@ -386,8 +386,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Lucknow, Uttar Pradesh",
     scope: "Waterbody",
-    image: "/images/fountain.jpg",
-    media: { type: "image", src: "/images/client/shapoorji-pallonji-client.jpeg" },
+    image: "/images/projects/Commercial-waterbody-shapoorji-pallonji.jpeg",
+    media: { type: "image", src: "/images/projects/Commercial-waterbody-shapoorji-pallonji.jpeg" },
     logo: "/images/client/shapoorji-pallonji-client.jpeg",
   },
   {
@@ -396,8 +396,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Indirapuram, Ghaziabad, Uttar Pradesh",
     scope: "Swimming Pool",
-    image: "/images/hero-pool.jpeg",
-    media: { type: "image", src: "/images/hero-pool.jpeg" },
+    image: "/images/projects/Commercial-swimming-pool-oxirich.jpeg",
+    media: { type: "image", src: "/images/projects/Commercial-swimming-pool-oxirich.jpeg" },
     logo: "/images/client/oxirich-client.jpeg",
   },
   {
@@ -406,8 +406,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Ghaziabad, Uttar Pradesh",
     scope: "Waterbody",
-    image: "/images/fountain.jpg",
-    media: { type: "image", src: "/images/fountain.jpg" },
+    image: "/images/projects/Commercial-waterbody-gst-mall.jpeg",
+    media: { type: "image", src: "/images/projects/Commercial-waterbody-gst-mall.jpeg" },
   },
   {
     title: "Nitara Limited",
@@ -415,18 +415,18 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Sector-65, Gurugram, Haryana",
     scope: "Waterbody",
-    image: "/images/fountain.jpg",
-    media: { type: "image", src: "/images/fountain.jpg" },
+    image: "/images/projects/Commercial-waterbody-nitara.jpeg",
+    media: { type: "image", src: "/images/projects/Commercial-waterbody-nitara.jpeg" },
     logo: "/images/client/nitara-client.jpeg",
   },
   {
     title: "Assotech",
     category: "Commercial",
     status: "Completed",
-    location: "ABC Creasta", // TODO: add city / sector
+    location: "ABC Creasta", 
     scope: "Expansion Joints",
-    image: "/images/engineering.jpg",
-    media: { type: "image", src: "/images/engineering.jpg" },
+    image: "/images/projects/Commercial-expansion-joints-assotech.jpeg",
+    media: { type: "image", src: "/images/projects/Commercial-expansion-joints-assotech.jpeg" },
   },
   {
     title: "M/s CK Enterprises",
@@ -434,8 +434,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Ashok Vihar, New Delhi",
     scope: "Swimming Pool Filtration",
-    image: "/images/engineering.jpg",
-    media: { type: "image", src: "/images/engineering.jpg" },
+    image: "/images/projects/Commercial-swimming-pool-ck-enterprises.jpeg",
+    media: { type: "image", src: "/images/projects/Commercial-swimming-pool-ck-enterprises.jpeg" },
   },
   {
     title: "Shri Ambe Shelters",
@@ -443,8 +443,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Gwalior Road, Agra, Uttar Pradesh",
     scope: "Swimming Pool Filtration",
-    image: "/images/engineering.jpg",
-    media: { type: "image", src: "/images/engineering.jpg" },
+    image: "/images/projects/Commercial-swimming-pool-ambe-shelters.jpeg",
+    media: { type: "image", src: "/images/projects/Commercial-swimming-pool-ambe-shelters.jpeg" },
   },
   {
     title: "TDI Infracrop",
@@ -452,8 +452,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Kundli, Sonipat, Haryana", // TODO: confirm (your list said "Kundli Lake Groove, Delhi")
     scope: "Swimming Pool Filtration",
-    image: "/images/engineering.jpg",
-    media: { type: "image", src: "/images/engineering.jpg" },
+    image: "/images/projects/Commercial-swimming-pool-tdi-infracrop.jpeg",
+    media: { type: "image", src: "/images/projects/Commercial-swimming-pool-tdi-infracrop.jpeg" },
     logo: "/images/client/tdi-client.jpeg",
   },
 
@@ -464,8 +464,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Agra, Uttar Pradesh",
     scope: "Swimming Pool Renovation work",
-    image: "/images/water-texture.jpg",
-    media: { type: "image", src: "/images/water-texture.jpg" },
+    image: "/images/projects/Hospitality-swimming-pool-itc-mughal.jpeg",
+    media: { type: "image", src: "/images/projects/Hospitality-swimming-pool-itc-mughal.jpeg" },
     logo: "/images/client/itc-mughal-client.jpeg",
   },
   {
@@ -474,8 +474,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Himachal Pradesh", // TODO: add town (e.g. Nahan) if known
     scope: "Swimming Pool",
-    image: "/images/spa.jpg",
-    media: { type: "image", src: "/images/spa.jpg" },
+    image: "/images/projects/Hospitality-swimming-pool-sirmour-retreat.jpeg",
+    media: { type: "image", src: "/images/projects/Hospitality-swimming-pool-sirmour-retreat.jpeg" },
     logo: "/images/client/sirmour-retreat-client.jpeg",
   },
 
@@ -486,8 +486,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Government School, Mandawali, New Delhi",
     scope: "Swimming Pool",
-    image: "/images/hero-pool.jpeg",
-    media: { type: "image", src: "/images/hero-pool.jpeg" },
+    image: "/images/projects/Institutional-swimming-pool-rd-pandey.jpeg",
+    media: { type: "image", src: "/images/projects/Institutional-swimming-pool-rd-pandey.jpeg" },
   },
   {
     title: "Reecon Engineering",
@@ -495,8 +495,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "ESIC Hospital, Okhla, New Delhi",
     scope: "Expansion Joints",
-    image: "/images/engineering.jpg",
-    media: { type: "image", src: "/images/engineering.jpg" },
+    image: "/images/projects/Institutional-expansion-joints-reecon.jpeg",
+    media: { type: "image", src: "/images/projects/Institutional-expansion-joints-reecon.jpeg" },
     logo: "/images/client/reecons-client.jpeg",
   },
   {
@@ -505,8 +505,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "DRDO, Wazirpur, New Delhi",
     scope: "Expansion Joints",
-    image: "/images/engineering.jpg",
-    media: { type: "image", src: "/images/engineering.jpg" },
+    image: "/images/projects/Institutional-expansion-joints-sr-ashok.jpeg",
+    media: { type: "image", src: "/images/projects/Institutional-expansion-joints-sr-ashok.jpeg" },
   },
   {
     title: "Surya Hi Tech",
@@ -514,8 +514,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "MVN School, Sector-43, Faridabad, Haryana",
     scope: "Swimming Pool Filtration",
-    image: "/images/engineering.jpg",
-    media: { type: "image", src: "/images/engineering.jpg" },
+    image: "/images/projects/Institutional-swimming-pool-filtration-surya-hi-tech.jpeg",
+    media: { type: "image", src: "/images/projects/Institutional-swimming-pool-filtration-surya-hi-tech.jpeg" },
     logo: "/images/client/mvn-satyameva-jayate-client.jpeg",
   },
   {
@@ -524,8 +524,8 @@ export const projects: Project[] = [
     status: "Completed",
     location: "Sarvodya Kanya Vidhyalay", // TODO: add area and city
     scope: "Swimming Pool Filtration",
-    image: "/images/engineering.jpg",
-    media: { type: "image", src: "/images/engineering.jpg" },
+    image: "/images/projects/Institutional-swimming-pool-filtration-maa-narayan.jpeg",
+    media: { type: "image", src: "/images/projects/Institutional-swimming-pool-filtration-maa-narayan.jpeg" },
   },
 ];
 /* Map client logos onto matching project entries */
@@ -719,5 +719,20 @@ export const galleryImages: {
     },
     caption: "Dancing Fountain at night",
     tag: "Res",
+  },
+  {
+    src: "/images/team.jpg",
+    media: { type: "image", src: "/images/res.jpeg" },
+    caption: siteProfile.name,
+    tag: "RES",
+  },
+  {
+    src: "/images/res-video.jpg",
+    media: {
+      type: "youtube",
+      src: "https://youtu.be/5HIah7gfPlE",
+    },
+    caption: "Luxury Indoor Swimming Pool",
+    tag: "Indoor Swimming Pool",
   },
 ];
