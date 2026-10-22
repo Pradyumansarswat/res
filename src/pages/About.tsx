@@ -354,7 +354,7 @@ export default function About() {
         <div className="mx-auto grid max-w-[1400px] items-center gap-16 px-5 sm:px-8 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <ParallaxFrame
-              src="/images/engineering.jpg"
+              src="/images/udit-keshri.png"
               alt="Leadership at RES"
               ratio="aspect-[4/5]"
             />
